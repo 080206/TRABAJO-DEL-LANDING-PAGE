@@ -1,0 +1,282 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav button {
+    background-color: #000;
+    color: #fff;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+nav button:hover {
+    background-color: #535353;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+/* Botón de cerrar sesión */
+#logoutBtn {
+    background-color: #000000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#logoutBtn:hover {
+    background-color: #535353;
+}
+
+main {
+    padding: 50px;
+    text-align: center;
+}
+
+.product-showcase {
+    margin-bottom: 30px;
+}
+
+.info {
+    margin-bottom: 30px;
+}
+
+.info strong {
+    color: #000;
+}
+
+/* Servicios */
+.services {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.services h2 {
+    color: #fff;
+    margin-bottom: 40px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.service-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.service-item {
+    flex-basis: 22%;
+    background-color: #e2dede;
+    color: #000;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+}
+
+.service-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.service-item p {
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Ofertas */
+.offers {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #fff;
+}
+
+.offers h2 {
+    margin-bottom: 40px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+}
+
+.offer-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.offer-item {
+    flex-basis: 45%;
+    text-align: center;
+}
+
+.offer-item img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.offer-item p {
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+@media (max-width: 1024px) {
+
+    .service-grid, .offer-grid {
+        flex-basis: 48%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    nav button, #logoutBtn {
+        padding: 10px;
+        width: 100%;
+    }
+
+    .service-grid, .offer-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .service-item, .offer-item {
+        flex-basis: 100%;
+    }
+
+    .product-showcase img {
+        width: 100%;
+        height: auto;
+    }
+
+    .service-item img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .offer-item img {
+        width: 100%;
+        height: auto;
+    }
+
+    .services h2, .offers h2 {
+        font-size: 20px;
+    }
+
+    .service-item p, .offer-item p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .service-item img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .offer-item img {
+        width: 100%;
+        height: auto;
+    }
+
+    .service-item, .offer-item {
+        padding: 10px;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    .services h2, .offers h2 {
+        font-size: 18px;
+    }
+
+    .service-item p, .offer-item p {
+        font-size: 12px;
+    }
+
+    nav button, #logoutBtn {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
